@@ -1,9 +1,13 @@
 import React from "react";
+import ProductsPage from "./pages/ProductsPage";
 
 function App() {
   return (
     <div className="App">
-      <header>Marudhupandiyan</header>
+      <header>Marudhu Pagination</header>
+      <div>
+        <ProductsPage />
+      </div>
     </div>
   );
 }

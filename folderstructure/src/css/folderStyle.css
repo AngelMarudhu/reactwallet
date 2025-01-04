@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.folder {
+  width: fit-content;
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: #f1f1f1;
+}
+
+.folder-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.folder-adding-buttons {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.folder-adding-buttons button {
+  margin: 10px;
+  padding: 3px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+
+.folder-name-text button {
+  background-color: #f1f1f1;
+  color: black;
+  border: none;
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-right: 20px;
+}

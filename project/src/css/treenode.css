@@ -1,0 +1,20 @@
+.tree-node {
+  margin-top: 10px;
+}
+
+.tree-node-header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tree-node-header:hover {
+  background-color: #e0e0e0;
+}
+
+.tree-children {
+  margin-left: 20px;
+}

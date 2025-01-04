@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.products_single {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+}
+
+.products_single img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

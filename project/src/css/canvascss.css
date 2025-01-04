@@ -1,0 +1,18 @@
+/* CSS file or in the style tag */
+.canvas {
+  width: 960px; /* Set the total width of the canvas */
+  height: 100vh; /* Full height of the viewport */
+  display: grid;
+  grid-template-columns: repeat(12, 80px); /* 12 columns, each 80px wide */
+  gap: 10px; /* Optional gap between columns */
+  margin: 0 auto; /* Center canvas horizontally */
+  background-color: lightgray; /* Optional background color */
+}
+
+.canvas-item {
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
