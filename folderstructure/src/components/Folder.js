@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../css/folderStyle.css";
+import useTraverseHook from "../utils/traversehook";
 
-const Folder = ({ explore }) => {
+const Folder = ({ explore, handleInsertNode }) => {
   const [expanded, setExpanded] = useState(false);
   const [showInput, setShowInput] = useState({
     show: false,
@@ -13,6 +14,17 @@ const Folder = ({ explore }) => {
     setExpanded(true);
     setShowInput({ show: true, isFolder });
   };
+
+
+  const onAddFolder = (e) => {
+    if (e.keyCode === 13 && e.target.value) {
+      setShowInput({ ...showInput, show: false });
+      handleInsertNode(explore.id, e.target.value, showInput.isFolder)
+    }
+  };
+
+
+
   return (
     <div className="folder">
       <div className="folder-name">
@@ -30,15 +42,13 @@ const Folder = ({ explore }) => {
       <div
         style={{
           display: expanded ? "block" : "none",
-          border: "1px solid black",
           padding: "10px",
         }}
       >
         {showInput.show && (
           <div>
-            <button onClick={() => setShowInput({ show: false })}>❌</button>
             <span>{showInput.isFolder ? "📁" : "📄"}</span>
-            <input type="text" placeholder="Enter name" />
+            <input autoFocus type="text" placeholder="Enter name" onKeyDown={(e) => { onAddFolder(e) }} onBlur={() => { setShowInput({ show: false }) }} />
           </div>
         )}
 
@@ -46,7 +56,7 @@ const Folder = ({ explore }) => {
           return (
             <div key={item.id}>
               {item.isFolder ? (
-                <Folder explore={item} />
+                <Folder handleInsertNode={handleInsertNode} explore={item} />
               ) : (
                 <span>📄 {item.name}</span>
               )}

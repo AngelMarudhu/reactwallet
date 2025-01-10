@@ -1,0 +1,38 @@
+.job_listing {
+  border: 2px solid blue;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  padding: 10px 10px 10px 10px;
+  background-color: #fff;
+  color: blueviolet;
+}
+
+.inactive-link {
+  pointer-events: none;
+  cursor: default;
+}
+
+.job_listing_title {
+  color: black;
+}
+
+.job_listing_title > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.job_listing_user_detail {
+  display: flex;
+  margin-left: 20px;
+}
+
+.job_listing_user_detail > p {
+  margin-left: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: chocolate;
+  margin-top: 10px;
+}
