@@ -1,0 +1,34 @@
+.drop-down {
+  width: 100%;
+  height: 100%;
+}
+
+.drop-down-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.drop-down-container label {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.drop-down select {
+  padding: 6px;
+  font-size: 16px;
+  width: 150px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .drop-down-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .drop-down select {
+    width: 100%;
+  }
+}

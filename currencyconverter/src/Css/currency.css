@@ -1,0 +1,83 @@
+.currency-converter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.amount-input {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.amount-input label {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.amount-input input {
+  width: auto;
+  padding: 6px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.convert-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.convert-button-span {
+  margin-top: 20px;
+}
+
+.convert-button button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.converted-amount {
+  text-align: right;
+  font-size: 20px;
+  color: blue;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .amount-input {
+    flex-direction: column;
+  }
+
+  .currency-converter {
+    flex-direction: column;
+  }
+
+  .swap-button {
+    width: 100%;
+  }
+
+  .swap-button button {
+    margin-top: 10px;
+    font-size: 20px;
+    transform: rotate(90deg);
+  }
+}
