@@ -60,6 +60,7 @@
   color: blue;
   margin-top: 10px;
   margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 768px) {

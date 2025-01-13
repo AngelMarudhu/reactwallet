@@ -1,0 +1,48 @@
+.password-container {
+  border: 5px solid peru;
+  padding: 10px;
+  background-color: teal;
+  width: 500px;
+}
+
+.password-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-header button {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid peru;
+  background-color: peru;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.password-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.generate-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: tan;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .password-container {
+    width: 100%;
+  }
+}

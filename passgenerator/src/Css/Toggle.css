@@ -1,0 +1,19 @@
+.toggle-containers {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.toggle-containers div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.toggle-containers input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
