@@ -7,7 +7,7 @@ import usePasswordGenerator from "../Util/generatePassword.jsx";
 
 const PasswordGen = () => {
   const [isCopied, setCopied] = useState(false);
-  const [length, setLength] = useState(5);
+  const [length, setLength] = useState(0);
   const [toggleData, setToggleData] = useState([
     {
       title: "Include Uppercase Letters",
@@ -39,17 +39,24 @@ const PasswordGen = () => {
     navigator.clipboard
       .writeText(passwords)
       .then(() => {
-        setCopied(true);
-        toast.success("Password Copied To Successfully", {
-          position: "top-center",
-          autoClose: 2000,
-        });
+        if (passwords.length > 0) {
+          setCopied(true);
+          toast.success("Password Copied To Successfully", {
+            position: "top-center",
+            autoClose: 2000,
+          });
+        } else {
+          throw new Error("Password is empty");
+        }
         setTimeout(() => {
           setCopied(false);
         }, 2000);
       })
       .catch((error) => {
-        console.log(error.message);
+        toast.error("Generate the password", {
+          position: "top-center",
+          autoClose: 2000,
+        });
       });
   };
 

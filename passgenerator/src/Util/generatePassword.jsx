@@ -45,6 +45,17 @@ const usePasswordGenerator = () => {
       const randomPass = Math.floor(Math.random() * charSet.length);
       generatedPassword += charSet[randomPass];
       setPasswords(generatedPassword);
+      setErrorMessage("");
+    }
+
+    if (generatedPassword) {
+      toast.success(
+        `Password Generated Successfully length of ${length} character`,
+        {
+          position: "top-center",
+          autoClose: 2000,
+        }
+      );
     }
   };
 
