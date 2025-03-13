@@ -28,10 +28,9 @@ function App() {
     );
 
     let fetchItemForPage = await Promise.all(
-      sliceIndex.map((itemId) => {
-        return fetch(`${API_ENDPOINT}/item/${itemId}.json`).then((res) =>
-          res.json()
-        );
+      sliceIndex.map(async (itemId) => {
+        const res = await fetch(`${API_ENDPOINT}/item/${itemId}.json`);
+        return await res.json();
       })
     );
 
