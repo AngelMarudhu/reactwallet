@@ -11,9 +11,9 @@ function App() {
   const handleInsertNode = (folderId, item, isFolder) => {
     // console.log(folderId, item, isFolder, "from app")
     const finalTree = insertNode(folderData, folderId, item, isFolder);
-    console.log(finalTree, "from app")
-    setFolderData(finalTree)
-  }
+    console.log(finalTree, "from app");
+    setFolderData(finalTree);
+  };
 
   return (
     <div className="App">

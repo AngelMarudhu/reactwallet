@@ -1,11 +1,12 @@
 import React, { Suspense, lazy } from "react";
 import "./App.css";
-import LoginPage from "./Pages/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Home from "./Pages/Home";
-import WatchListMovies from "./Components/WatchListMovies";
 // import MoviesDetails from "./Components/MoviesDetails";
+
 const MoviesDetails = lazy(() => import("./Components/MoviesDetails"));
+const Home = lazy(() => import("./Pages/Home"));
+const LoginPage = lazy(() => import("./Pages/LoginPage"));
+const WatchListMovies = lazy(() => import("./Components/WatchListMovies"));
 
 function App() {
   return (

@@ -7,6 +7,7 @@ import { useNavigate } from "react-router";
 import TrendingMovies from "../Components/TrendingMovies";
 import SearchResults from "../Components/SearchResults";
 import SearchingMovies from "../Components/SearchingMovies";
+import { FaUser } from "react-icons/fa";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -54,8 +55,10 @@ const Home = () => {
             </StyledButton>
 
             <section>
-              {user?.photoURL && (
+              {user?.photoURL ? (
                 <img
+                  src={user.photoURL}
+                  alt="Marudhu"
                   style={{
                     width: "50px",
                     height: "50px",
@@ -63,9 +66,11 @@ const Home = () => {
                     objectFit: "cover",
                     border: "5px solid black",
                   }}
-                  src={user.photoURL}
-                  alt="Marudhu"
                 />
+              ) : (
+                <div>
+                  <FaUser />
+                </div>
               )}
             </section>
           </>

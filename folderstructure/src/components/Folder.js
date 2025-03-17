@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../css/folderStyle.css";
-import useTraverseHook from "../utils/traversehook";
 
 const Folder = ({ explore, handleInsertNode }) => {
   const [expanded, setExpanded] = useState(false);
@@ -15,15 +14,12 @@ const Folder = ({ explore, handleInsertNode }) => {
     setShowInput({ show: true, isFolder });
   };
 
-
   const onAddFolder = (e) => {
     if (e.keyCode === 13 && e.target.value) {
       setShowInput({ ...showInput, show: false });
-      handleInsertNode(explore.id, e.target.value, showInput.isFolder)
+      handleInsertNode(explore.id, e.target.value, showInput.isFolder);
     }
   };
-
-
 
   return (
     <div className="folder">
@@ -48,7 +44,17 @@ const Folder = ({ explore, handleInsertNode }) => {
         {showInput.show && (
           <div>
             <span>{showInput.isFolder ? "📁" : "📄"}</span>
-            <input autoFocus type="text" placeholder="Enter name" onKeyDown={(e) => { onAddFolder(e) }} onBlur={() => { setShowInput({ show: false }) }} />
+            <input
+              autoFocus
+              type="text"
+              placeholder="Enter name"
+              onKeyDown={(e) => {
+                onAddFolder(e);
+              }}
+              onBlur={() => {
+                setShowInput({ show: false });
+              }}
+            />
           </div>
         )}
 
